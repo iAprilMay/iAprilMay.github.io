@@ -36,14 +36,44 @@
     </div>
     <!-- /.item_reviews -->
     <div class="item_feedback">
-        <h2>Здесь будет форма обратной связи</h2>
-        <p>Форма заказа обратного звонка:
-            - Имя
-            - телефон
-            - email
-            - дата и время звонка
-            - кнопку заказа (submit или image)
-            - подумать (применить) об элементах безопасности формы</p>
+        <form action="feedback_form.php" method="POST" name="feedback_form">
+            <fieldset>
+                <h2>Форма заказа обратного звонка:</h2>
+
+                <label>
+                    <p>Введите Ваше имя:</p>
+                    <input type="text"
+                           name="form_name"
+                           size="80"
+                           maxlength="30"
+                           pattern="[а-яА-Яa-zA-Z0-9]+"
+                           placeholder="Здесь нужно набрать Ваше Имя" required>
+                </label>
+
+                <label>
+                    <p>Телефонный номер:</p>
+                    <input type="text"
+                           name="form_phone_number"
+                           size="12"
+                           maxlength="12"
+                           pattern="[а-яА-Яa-zA-Z0-9]+"
+                           placeholder="Здесь нужно набрать Ваш телефонный номер" required>
+                </label>
+
+                <label>
+                    <p>Введите Ваш email:</p>
+                    <input type="email" name="form_email" size="80" maxlength="30" required>
+                </label>
+
+                <textarea id="id_form_datetime_beta"
+                          name="name_form_datetime_beta"
+                          cols="30"
+                          rows="1"
+                          placeholder="Введите желаемое время звонка"></textarea>
+
+                <input type="submit" value="Отправить">
+            </fieldset>
+        </form>
     </div>
     <!-- /.item_feedback -->
 </section>
